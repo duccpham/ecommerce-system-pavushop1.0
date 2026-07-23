@@ -1,0 +1,79 @@
+.nav-icon {
+  font-size: 24px;
+}
+
+.ant-badge-count {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #52c41a;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  padding: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #1890ff;
+}
+
+.nav-link.bold {
+  font-weight: bold;
+}
+
+.nav-right {
+  gap: 15px;
+}
+
+.search-box {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-box .ant-input {
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.nav-icon {
+  font-size: 24px;
+  cursor: pointer;
+}

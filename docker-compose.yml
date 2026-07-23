@@ -1,0 +1,79 @@
+version: "3.9"
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: pavushop-mysql
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: pavushop
+      MYSQL_ROOT_HOST: "%"
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+    networks:
+      - pavushop-network
+
+  redis:
+    image: redis:7
+    container_name: pavushop-redis
+    restart: always
+
+    ports:
+      - "6379:6379"
+
+    networks:
+      - pavushop-network
+
+  springboot:
+    build: .
+    container_name: pavushop-backend
+    restart: always
+
+    depends_on:
+      - mysql
+      - redis
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/pavushop
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+
+    volumes:
+      - ./upload:/app/upload
+
+    networks:
+      - pavushop-network
+
+  frontend:
+    build:
+      context: ../frontend1
+    container_name: pavushop-frontend
+    restart: always
+
+    depends_on:
+      - springboot
+
+    ports:
+      - "5173:80"
+
+    networks:
+      - pavushop-network
+
+volumes:
+  mysql-data:
+
+networks:
+  pavushop-network:
