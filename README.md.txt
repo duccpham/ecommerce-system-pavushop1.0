@@ -41,7 +41,7 @@ A full-stack e-commerce web application built with Spring Boot and React.
 - Ant Design
 - Vite
 
-# DevOps
+## DevOps
 - Docker
 - Docker Compose
 - Nginx
@@ -67,8 +67,38 @@ A full-stack e-commerce web application built with Spring Boot and React.
       MySQL                   Redis               Image Storage
    (Data Storage)          (OTP Cache)          (Upload Folder)
 ```
+# Screenshots
 
-## Run Project 
+ Home
+
+![Home](screenshots/home.png)
+
+ Products
+
+![Products](screenshots/products.png)
+
+ Product Detail
+
+![Product Detail](screenshots/productDetail.png)
+
+ Cart
+
+![Cart](screenshots/cart.png)
+
+ Login
+
+![Login](screenshots/login.png)
+
+ Register
+
+![Register](screenshots/register.png)
+
+ Admin
+
+![Admin](screenshots/admin.png)
+
+---
+# Run Project 
 
 Docker
 bash
@@ -78,7 +108,7 @@ docker compose up --build
 ---
 
 
-## Author
+# Author
 
 **Thắng Phạm**
 
