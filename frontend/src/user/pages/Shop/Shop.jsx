@@ -184,7 +184,7 @@ const Shop1 = () => {
                     <p><strong>Giảm giá:</strong> {product.discount}%</p>
                     <p><strong>Ngày nhập:</strong> {new Date(product.enteredDate).toLocaleDateString()}</p>
                     <p><strong>Danh mục:</strong> {product.category?.categoryName}</p>
-                    <p><strong>Thương hiệu:</strong> {product.brand?.name}</p>
+                    <p><strong>Thương hiệu:</strong> {product.brand?.brandName}</p>
                     <Button
                       type="primary"
                       onClick={(e) => {
