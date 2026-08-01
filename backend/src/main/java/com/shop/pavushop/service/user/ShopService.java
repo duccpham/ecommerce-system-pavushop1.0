@@ -24,7 +24,7 @@ public interface ShopService {
 	
 	public Map<Integer, Long> countProductByCategoryName() ;
 	
-	public List<Product> productByBrand(Integer id) ;
+	public List<Product> listProductByBrandId(Integer id) ;
 	
 	public List<Product> showSearch( String keyword);
 

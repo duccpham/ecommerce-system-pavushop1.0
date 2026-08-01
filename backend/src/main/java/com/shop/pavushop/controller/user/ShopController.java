@@ -40,7 +40,7 @@ public class ShopController{
     @GetMapping("/productByBrand/{id}")
     public ResponseEntity<Map<String, Object>> getProductByBrand(@PathVariable("id") Integer id) {
         Map<String, Object> response = new HashMap<>();
-        response.put("productList", shopService.productByBrand(id));
+        response.put("productList", shopService.listProductByBrandId(id));
         return ResponseEntity.ok(response);
     }
     

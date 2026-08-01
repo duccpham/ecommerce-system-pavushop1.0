@@ -61,8 +61,8 @@ public class ShopServiceImpl implements ShopService {
     }
 
 	@Override
-	public List<Product> productByBrand(Integer id) {
-		return productRepository.findByCategoryCategoryId(id);
+	public List<Product> listProductByBrandId(Integer id) {
+		return productRepository.findByBrandBrandId(id);
 	}
 
 	@Override
