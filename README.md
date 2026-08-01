@@ -105,6 +105,14 @@ bash
 cd ecommerce-system-pavushop1.0
 docker compose up --build
 
+# Demo Accounts
+ ## admin 
+ admin
+ 123123
+ 
+ ## user
+ user1
+ 123123
 ---
 
 # Author
